@@ -12,7 +12,7 @@
 
   --pink-100: #b52184;
   --darkblue-100: #312d64;
-  --darkblue-gradient: linear-gradient(134deg, #343193 0%, #302C63 100%);
+  --darkblue-gradient: linear-gradient(134deg, #343193 0%, #302c63 100%);
 }
 
 body,
@@ -36,12 +36,13 @@ body::before {
   /*min-height: 135.5rem;*/
   height: 100%;
   width: 100%;
-  min-height: 142rem;
+  height: 135rem;
+  
 
   position: absolute;
   top: 67rem;
   z-index: -1;
-  background: var(--darkblue-gradient)
+  background: var(--darkblue-gradient);
 }
 
 header {
@@ -80,7 +81,6 @@ p {
 section p {
   /*max-width: 26.5rem;*/
   width: 100%;
-  
 }
 
 section {
@@ -89,11 +89,10 @@ section {
   gap: 6rem;
   padding-left: 5.9rem;
   padding-right: 5.9rem;
-  padding-top: 5.9rem;
+  padding-top: 14rem;
   align-items: center;
-  margin: 9.3rem auto;
+  margin: 9.8rem auto;
   border: 1px solid red;
-  
 }
 
 .item {
@@ -181,7 +180,7 @@ form textarea {
   top: 50%;
   left: 1rem;
   transform: translateY(-50%);
-text-align: center;
+  text-align: center;
   background-image: url(./images/at.svg);
   background-size: 2rem 2rem;
   width: 2rem;
@@ -216,21 +215,59 @@ input:invalid {
   /* padding-left: 10px; */
 }
 
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 3.2rem 1.6rem;
+  background: var(--darkblue-gradient);
+  margin-top: 6.5rem;
+}
 
-@media (min-width: 1056px) {
- section {
-  grid-template-columns: 1fr 1fr 1fr;
-  border: 1px solid red;
+footer p {
+  color: white;
+}
+
+@media (min-width: 1000px) {
+  .space {
+    display: flex;
+    transform: translateX(190%);
+    max-height: 70rem;
+    min-width: 49.3rem;
+  }
+  header h2 {
+   top: 18rem;
+   position: absolute;
+   left: 11rem;
+   font-size: 5.8rem;
+
+  }
   
+  header p {
+   top: 25rem;
+   position: absolute;
+   left: 11rem;
+   font-size: 3.2rem;
+  }
+
+  .arrow {
+    position: absolute;
+    top: 40rem;
+    left: 11rem;
+  }
+
+
+
+
+  section {
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 1px solid red;
+  }
+
+  .item {
+    min-width: 27rem;
+  }
+
+ body::before {
+  height: 49rem;
  }
-
- .item {
-  min-width: 27rem;
- }
-
-
-
- 
-
- 
 }
