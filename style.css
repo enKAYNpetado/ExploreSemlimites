@@ -26,24 +26,23 @@ textarea {
 body {
   font-size: 1.6rem;
 }
-.app {
-  max-height: 249rem;
-  min-height: 119rem;
-}
 
-body::before {
+/*body::before {
   content: "";
-  /*min-height: 135.5rem;*/
+  /*min-height: 135.5rem;
   height: 100%;
   width: 100%;
-  height: 135rem;
+  height: 124.2rem;
   
+  display: flex;
+  flex: 1;
 
   position: absolute;
   top: 67rem;
   z-index: -1;
   background: var(--darkblue-gradient);
-}
+  border: 1px solid red;
+}*/
 
 header {
   text-align: center;
@@ -85,14 +84,12 @@ section p {
 
 section {
   display: grid;
-  grid-template-rows: max-content 1fr max-content;
+  grid-template-rows: max-content;
   gap: 6rem;
-  padding-left: 5.9rem;
-  padding-right: 5.9rem;
-  padding-top: 14rem;
+  padding: 5.9rem;
   align-items: center;
-  margin: 9.8rem auto;
-  border: 1px solid red;
+  margin: 9.8 auto;
+  background: var(--darkblue-gradient);
 }
 
 .item {
@@ -109,16 +106,12 @@ section {
   margin-top: 3rem;
 }
 
-form {
-  border: 1px solid red;
-}
-
 form h2 {
   font-size: 3.2rem;
 }
 
 fieldset {
-  margin-top: 1rem;
+  margin-top: 9rem;
   text-align: center;
 }
 
@@ -146,7 +139,7 @@ form textarea {
   gap: 1.2rem;
   border-radius: 1.6rem;
   border: 1.5px solid var(--darkblue-100);
-  height: 9.8rem;
+  max-height: 9.8rem;
 }
 
 .input-wrapper {
@@ -197,6 +190,7 @@ form textarea {
   background: var(--darkblue-gradient);
   padding: 1.6rem;
   margin-top: 2.4rem;
+  margin-bottom: 10rem;
 }
 
 .sendmsg {
@@ -220,54 +214,81 @@ footer {
   text-align: center;
   padding: 3.2rem 1.6rem;
   background: var(--darkblue-gradient);
-  margin-top: 6.5rem;
+  /*margin-top: 6.5rem;*/
 }
 
 footer p {
   color: white;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 1440px) {
   .space {
-    display: flex;
-    transform: translateX(190%);
     max-height: 70rem;
     min-width: 49.3rem;
   }
-  header h2 {
-   top: 18rem;
-   position: absolute;
-   left: 11rem;
-   font-size: 5.8rem;
 
+  .explorer {
+    display: flex;
+    justify-content: flex-end;
   }
-  
+
+  header h2 {
+    top: 18rem;
+    position: absolute;
+    left: 9rem;
+    font-size: 5.8rem;
+  }
+
   header p {
-   top: 25rem;
-   position: absolute;
-   left: 11rem;
-   font-size: 3.2rem;
+    top: 25rem;
+    position: absolute;
+    left: 9rem;
+    font-size: 3.2rem;
   }
 
   .arrow {
     position: absolute;
     top: 40rem;
-    left: 11rem;
+    left: 9rem;
   }
-
-
-
 
   section {
     grid-template-columns: 1fr 1fr 1fr;
-    border: 1px solid red;
+    margin-top: 12rem;
   }
 
   .item {
     min-width: 27rem;
   }
 
- body::before {
-  height: 49rem;
- }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-image: url(./images/stars.jpg);
+    background-size: 64.4rem 61.2rem;
+    background-repeat: no-repeat;
+    background-position: right;
+    margin-left: 5rem;
+  }
+
+  fieldset input {
+    min-width: 60rem;
+  }
+
+  fieldset textarea {
+    min-width: 60rem;
+  }
+
+  .sendmsg {
+    margin-right: 45.7rem;
+  }
+
+  form h2 {
+    margin-right: 32.7rem;
+  }
+
+  /*body::before {
+    max-height: 52rem;
+  }*/
 }
